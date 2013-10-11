@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Button Content="Poll eDRS Request" HorizontalAlignment="Left" Height="25" Margin="41,29,0,0" VerticalAlignment="Top" Width="96" Click="Button_Click"/>
+
     </Grid>
 </Window>

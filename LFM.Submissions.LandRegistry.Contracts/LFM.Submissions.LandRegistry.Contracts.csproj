@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7D8FEB25-ABA7-44DE-84DB-5B82D5316FBB}</ProjectGuid>
+    <ProjectGuid>{E0E75BAE-7070-4F94-AD06-EAACAF0EA125}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LFM.Submissions.LandRegistry</RootNamespace>
-    <AssemblyName>LFM.Submissions.LandRegistry</AssemblyName>
+    <RootNamespace>LFM.Submissions.LandRegistry.Contracts</RootNamespace>
+    <AssemblyName>LFM.Submissions.LandRegistry.Contracts</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -42,14 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GetEdrsSubmissionStatusHandler.cs" />
+    <Compile Include="GetEdrsSubmissionStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LFM.Submissions.LandRegistry.Contracts\LFM.Submissions.LandRegistry.Contracts.csproj">
-      <Project>{e0e75bae-7070-4f94-ad06-eaacaf0ea125}</Project>
-      <Name>LFM.Submissions.LandRegistry.Contracts</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

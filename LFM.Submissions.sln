@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LFM.Submissions.LandRegistr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LFM.Submissions.Api", "LFM.Submissions.Api\LFM.Submissions.Api.csproj", "{6ED06D5F-2B3D-455D-95BD-D479D16F74B8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LFM.Submissions.LandRegistry.Contracts", "LFM.Submissions.LandRegistry.Contracts\LFM.Submissions.LandRegistry.Contracts.csproj", "{E0E75BAE-7070-4F94-AD06-EAACAF0EA125}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LFM.Submissions.Landregistry.InternalMessages", "LFM.Submissions.Landregistry.InternalMessages\LFM.Submissions.Landregistry.InternalMessages.csproj", "{23F7358A-A120-4E48-B4C3-14918569415A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{6ED06D5F-2B3D-455D-95BD-D479D16F74B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6ED06D5F-2B3D-455D-95BD-D479D16F74B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6ED06D5F-2B3D-455D-95BD-D479D16F74B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0E75BAE-7070-4F94-AD06-EAACAF0EA125}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0E75BAE-7070-4F94-AD06-EAACAF0EA125}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0E75BAE-7070-4F94-AD06-EAACAF0EA125}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0E75BAE-7070-4F94-AD06-EAACAF0EA125}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23F7358A-A120-4E48-B4C3-14918569415A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23F7358A-A120-4E48-B4C3-14918569415A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23F7358A-A120-4E48-B4C3-14918569415A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23F7358A-A120-4E48-B4C3-14918569415A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,5 +52,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{7D8FEB25-ABA7-44DE-84DB-5B82D5316FBB} = {9202D05B-07AD-468E-A8C8-40ABD7598E2A}
 		{1A50F02B-15B8-46F3-B7D7-6138C49A063C} = {9202D05B-07AD-468E-A8C8-40ABD7598E2A}
+		{E0E75BAE-7070-4F94-AD06-EAACAF0EA125} = {9202D05B-07AD-468E-A8C8-40ABD7598E2A}
+		{23F7358A-A120-4E48-B4C3-14918569415A} = {9202D05B-07AD-468E-A8C8-40ABD7598E2A}
 	EndGlobalSection
 EndGlobal
