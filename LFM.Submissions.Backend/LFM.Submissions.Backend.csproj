@@ -56,6 +56,19 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LFM.Submissions.LandRegistry.Contracts\LFM.Submissions.LandRegistry.Contracts.csproj">
+      <Project>{e0e75bae-7070-4f94-ad06-eaacaf0ea125}</Project>
+      <Name>LFM.Submissions.LandRegistry.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LFM.Submissions.LandRegistry\LFM.Submissions.LandRegistry.csproj">
+      <Project>{7d8feb25-aba7-44de-84db-5b82d5316fbb}</Project>
+      <Name>LFM.Submissions.LandRegistry</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

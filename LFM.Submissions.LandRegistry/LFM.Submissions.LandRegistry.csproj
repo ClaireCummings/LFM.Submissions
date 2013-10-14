@@ -33,6 +33,9 @@
     <Reference Include="NServiceBus">
       <HintPath>..\packages\NServiceBus.Interfaces.4.0.5\lib\net40\NServiceBus.dll</HintPath>
     </Reference>
+    <Reference Include="NServiceBus.Core">
+      <HintPath>..\packages\NServiceBus.4.0.5\lib\net40\NServiceBus.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,6 +53,16 @@
       <Project>{e0e75bae-7070-4f94-ad06-eaacaf0ea125}</Project>
       <Name>LFM.Submissions.LandRegistry.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LFM.Submissions.Landregistry.InternalMessages\LFM.Submissions.Landregistry.InternalMessages.csproj">
+      <Project>{23F7358A-A120-4E48-B4C3-14918569415A}</Project>
+      <Name>LFM.Submissions.Landregistry.InternalMessages</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -59,4 +72,8 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <PropertyGroup>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(ProjectDir)$(OutputPath)NServiceBus.Host.exe</StartProgram>
+  </PropertyGroup>
 </Project>

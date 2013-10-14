@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LFM.Submissions.LandRegistry.Contracts;
 
 namespace LFM.Submissions.Api
 {
@@ -27,7 +28,13 @@ namespace LFM.Submissions.Api
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            
+            App.Bus.Send(new GetEdrsSubmissionStatus()
+                {
+                    MessageId = "returnType1",
+                    Username = "BGUser001",
+                    Password = "LandReg001"
+                });
         }
     }
 }

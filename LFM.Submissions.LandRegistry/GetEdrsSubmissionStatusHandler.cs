@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LFM.Submissions.LandRegistry.Contracts;
+using LFM.Submissions.Landregistry.InternalMessages;
 using NServiceBus;
 
 namespace LFM.Submissions.LandRegistry
@@ -14,7 +15,13 @@ namespace LFM.Submissions.LandRegistry
 
         public void Handle(GetEdrsSubmissionStatus message)
         {
-            Bus.Send();
+            Console.WriteLine("GetEdrsSubmissionStatus " + message.MessageId + " recieved.");
+            Bus.Send(new DoEdrsPollRequest()
+                {
+                    MessageId = message.MessageId,
+                    Username = message.Username,
+                    Password = message.Password
+                });
         }
     }
 }

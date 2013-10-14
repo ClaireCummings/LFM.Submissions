@@ -5,6 +5,8 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using NServiceBus;
+using NServiceBus.Installation.Environments;
 
 namespace LFM.Submissions.Api
 {
@@ -13,5 +15,20 @@ namespace LFM.Submissions.Api
     /// </summary>
     public partial class App : Application
     {
+        public static IBus Bus { get; set; }
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            Configure.Serialization.Xml();
+            Bus = Configure.With()
+                .Log4Net()
+                .DefaultBuilder()
+                .UseTransport<Msmq>()
+                .UnicastBus()
+                .CreateBus()
+                .Start(() => Configure.Instance.ForInstallationOn<Windows>().Install());
+        }
     }
 }

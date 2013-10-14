@@ -37,6 +37,8 @@ namespace LFM.Submissions.LandRegistry.BusinessGateway
 
             // submit the request
             var response = client.getResponse(request);
+
+            Console.WriteLine(response.GatewayResponse.Acknowledgement.MessageDescription);
             
         }
     }
