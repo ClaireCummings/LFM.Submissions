@@ -14,14 +14,14 @@ namespace LFM.Submissions.LandRegistry.BusinessGateway
 {
     public class DoEdrsPollRequestHandler : IHandleMessages<DoEdrsPollRequest>
     {
+        IBus Bus { get; set; }
+
         public void Handle(DoEdrsPollRequest message)
         {
             var request = new PollRequestType
             {
                 ID = new Q1IdentifierType {MessageID = new MessageIDTextType {Value = message.MessageId}}
             };
-
-            // populate it
 
             // create an instance of the client
             var client = new EDocumentRegistrationV1_0PollRequestServiceClient();
@@ -37,6 +37,7 @@ namespace LFM.Submissions.LandRegistry.BusinessGateway
 
             // submit the request
             var response = client.getResponse(request);
+            
         }
     }
 }
