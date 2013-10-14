@@ -39,7 +39,14 @@
     <Reference Include="NServiceBus.Host">
       <HintPath>..\packages\NServiceBus.Host.4.0.5\lib\net40\NServiceBus.Host.exe</HintPath>
     </Reference>
+    <Reference Include="Raven.Abstractions">
+      <HintPath>..\packages\RavenDB.Client.2.0.2380\lib\net40\Raven.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Raven.Client.Lightweight">
+      <HintPath>..\packages\RavenDB.Client.2.0.2380\lib\net40\Raven.Client.Lightweight.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,9 +55,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="EndpointConfig.cs" />
+    <Compile Include="GetEdrsSubmissionStatusHandler.cs" />
+    <Compile Include="eDrsPollRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RavenBootstrapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -60,10 +69,6 @@
     <ProjectReference Include="..\LFM.Submissions.LandRegistry.Contracts\LFM.Submissions.LandRegistry.Contracts.csproj">
       <Project>{e0e75bae-7070-4f94-ad06-eaacaf0ea125}</Project>
       <Name>LFM.Submissions.LandRegistry.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LFM.Submissions.LandRegistry\LFM.Submissions.LandRegistry.csproj">
-      <Project>{7d8feb25-aba7-44de-84db-5b82d5316fbb}</Project>
-      <Name>LFM.Submissions.LandRegistry</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

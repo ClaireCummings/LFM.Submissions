@@ -5,12 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using NServiceBus;
 
-namespace LFM.Submissions.LandRegistry.Contracts
+namespace LFM.Submissions.Landregistry.InternalMessages
 {
-    public class GetEdrsSubmissionStatus : ICommand
+    public class EdrsResponse : IMessage
     {
         public string MessageId { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
+        public object Response { get; set; }
     }
 }

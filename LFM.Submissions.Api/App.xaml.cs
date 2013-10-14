@@ -27,6 +27,7 @@ namespace LFM.Submissions.Api
                 .DefaultBuilder()
                 .UseTransport<Msmq>()
                 .UnicastBus()
+                .LoadMessageHandlers()
                 .CreateBus()
                 .Start(() => Configure.Instance.ForInstallationOn<Windows>().Install());
         }

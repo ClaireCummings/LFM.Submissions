@@ -14,7 +14,7 @@ namespace LFM.Submissions.LandRegistry.BusinessGateway
 {
     public class DoEdrsPollRequestHandler : IHandleMessages<DoEdrsPollRequest>
     {
-        IBus Bus { get; set; }
+        public IBus Bus { get; set; }
 
         public void Handle(DoEdrsPollRequest message)
         {
@@ -38,7 +38,14 @@ namespace LFM.Submissions.LandRegistry.BusinessGateway
             // submit the request
             var response = client.getResponse(request);
             
-
+            Console.WriteLine("Response Recieved. Will now reply with " + message.MessageId);
+           
+            Bus.Reply(new EdrsResponse()
+                {
+                    MessageId = message.MessageId,
+                    Response = response
+                });
+            
         }
     }
 }
